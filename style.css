@@ -110,23 +110,18 @@ section .content p {
 
 .button {
     background: var(--primary-color);
-
     border: none;
     border-radius: 4rem;
-
     margin-bottom: 6rem;
-
     padding: 1.6rem 3.2rem;
     width: fit-content; /* a largura dele ficara adaptada ao conteudo */
-
     color: white;
     font-size: 1.4rem;
     font-weight: 700;
     text-transform: uppercase;
-
-    display: flex; /* faz com que destrava o alinhamento do eixo X e eixo Y */
-    align-items: center; /*faz o alinhamento no eixo X*/
-    justify-content: center; /*faz o alinhamento no eixo Y*/
+    display: flex;
+    align-items: center;
+    justify-content: center;
     gap: 1.6rem;
 }
 
@@ -136,7 +131,7 @@ section .content p {
 }
 
 .social-links {
-    display: flex; /*deixa os elementos um ao lado do outro*/
+    display: flex;
     align-items: center;
     justify-content: center;
     gap: 3.2rem;
@@ -169,13 +164,10 @@ body.menu-expanded #navigation .logo path,
 /*=== NAVIGATION =================================*/
 nav {
     display: flex;
-
     height: var(--nav-height);
-
     position: fixed;
     top: 0;
     width: 100vw;
-
     z-index: 100;
 }
 
@@ -205,8 +197,8 @@ body.menu-expanded {
     overflow: hidden; /* overflow faz com que o remova as barra de rolagem */
 }
 
+/* removendo todos os filhos do primeiro nivel do body menos o <nav> */
 body.menu-expanded > :not(nav) {
-    /* removendo todos os filhos do primeiro nivel do body menos o <nav> */
     visibility: hidden;
 }
 
@@ -228,16 +220,12 @@ body.menu-expanded .close-menu {
 }
 
 body.menu-expanded .menu {
-    /*quando o body tiver a classe menu-expanded ele procura dentro a classe menu */
     top: 0;
     left: 0;
     background: var(--primary-color);
-
     width: 100vw;
     height: 100vh;
-
     padding-top: var(--nav-height);
-
     transition: transform 300ms;
     transform: translateY(0);
 }
@@ -247,9 +235,7 @@ body.menu-expanded .menu {
     display: flex;
     flex-direction: column; /*deixando um embaixo do outro*/
     gap: 4.8rem;
-
     margin-top: 6rem;
-
     font-weight: 700;
     font-size: 2.4rem;
     line-height: 3.1rem;
@@ -269,12 +255,9 @@ body.menu-expanded .menu {
     line-height: 2.3rem;
     text-transform: uppercase;
     text-decoration: none;
-
     color: var(--primary-color);
-
     display: inline-block; /* permite aplicar altura e largura e mantendo na mesma linha */
     padding: 16px 32px;
-
     margin-top: 4.8rem;
     margin-bottom: 8rem;
 }
@@ -306,18 +289,17 @@ body.menu-expanded button path {
     padding-top: calc(4.1rem + var(--nav-height));
 }
 
-/* criando a cor de fundo */
+/* criando a cor de fundo do home*/
 #home::before {
     content: "";
     width: 100%;
     height: calc(76% + var(--nav-height));
     background-color: var(--brand-light);
     display: block;
-
     position: absolute; /* faz com que o elemento fique acima de qualquer outro */
     top: 0;
     left: 0;
-    z-index: -1; /*mexe nas camadas*/
+    z-index: -1;
 }
 
 #home p {
@@ -325,7 +307,6 @@ body.menu-expanded button path {
     line-height: 150%;
     font-weight: 400;
     color: var(--paragraph);
-
     margin-bottom: 3.2rem;
 }
 
@@ -342,15 +323,13 @@ body.menu-expanded button path {
 
 #home .stats {
     width: 100%;
-    padding-block: 4rem; /*block vai colocar padding no superior e no inferior*/
-    margin-inline: auto; /*inline vai colocar margin na esquerda e na direita*/
-
+    padding-block: 4rem; /* coloca padding no superior e no inferior*/
+    margin-inline: auto; /* coloca margin na esquerda e na direita*/
     background-color: var(--brand-beige);
     border: 1px solid var(--brand-light);
     border-radius: 0.6rem;
-
     display: flex;
-    flex-direction: column; /*colocando um abaixo do outro*/
+    flex-direction: column;
     justify-content: center;
     gap: 6rem;
 }
@@ -359,7 +338,6 @@ body.menu-expanded button path {
     font-size: 4.8rem;
     color: var(--headline);
     line-height: 130%;
-
     margin-bottom: 0.4rem;
 }
 
@@ -384,9 +362,7 @@ body.menu-expanded button path {
 #services .card {
     padding: 2.4rem;
     text-align: left;
-
     background: white;
-
     border: 1px solid var(--brand-light);
     border-radius: 0.6rem;
 }
@@ -471,7 +447,6 @@ footer .social-links {
     right: 2.5rem;
     opacity: 0;
     visibility: hidden;
-
     transform: translateY(100%);
     transition: 200ms;
 }
@@ -574,12 +549,9 @@ footer .social-links {
         justify-content: center;
         align-items: center;
         padding: 1rem 2.4rem;
-
         border: 1px solid var(--primary-color);
         border-radius: 4rem;
-
         color: var(--primary-color);
-
         font-weight: 700;
         font-size: 1.4rem;
         line-height: 1.8rem;
@@ -611,17 +583,16 @@ footer .social-links {
         font-weight: 700;
     }
 
+    /* Criando a linha de animação nos links da navbar*/
     nav#navigation .menu li a::after {
         content: "";
         width: 0;
         height: 2px;
         background-color: var(--primary-color);
         display: block;
-
-        position: relative; /* relative libera a propriedade bottom */
+        position: relative;
         bottom: -2rem;
         left: -0.5rem;
-
         transition: width 0.2s;
     }
 
