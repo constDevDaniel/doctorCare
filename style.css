@@ -7,6 +7,8 @@
     box-sizing: border-box;
     list-style: none;
     text-decoration: none;
+    --webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
 }
 
 :root {
@@ -23,10 +25,6 @@
     --bg-light: hsl(180, 14%, 97%);
 
     font-size: 62.5%;
-    /* rem é baseado no tamanho de fonte do navegador */
-    /* 100% são 16px a fonte padrão do navegador */
-    /* 62.5% passará a ser 10px */
-    /* fazendo isso 1 rem agora será 10px */
 
     --nav-height: 7.2rem;
 }
